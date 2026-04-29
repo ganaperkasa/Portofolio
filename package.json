@@ -1,0 +1,27 @@
+{
+  "name": "myportofolio",
+  "version": "1.0.0",
+  "description": "Modern portfolio website with Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./styles/tailwind.css -o ./styles/output.css --watch",
+    "build": "tailwindcss -i ./styles/tailwind.css -o ./styles/output.css --minify",
+    "dev": "npm run build-css",
+    "serve": "python -m http.server 8000",
+    "deploy": "npm run build && echo 'Ready for deployment!'"
+  },
+  "keywords": [
+    "portfolio",
+    "tailwindcss",
+    "responsive",
+    "modern",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
