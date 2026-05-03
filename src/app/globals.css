@@ -11,6 +11,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@theme {
+  --color-primary: #6366f1; /* indigo */
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
