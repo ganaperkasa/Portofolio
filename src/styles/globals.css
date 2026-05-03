@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Fira+Code:wght@300;400;500&display=swap');
+
+:root {
+  --void: #06090f;
+  --deep: #080d18;
+  --surface: #0c1422;
+  --surface-2: #101a2e;
+  --ink: #e8eef8;
+  --ink-2: #8fa3c4;
+  --ink-3: #3d5278;
+  --accent: #3b82f6;
+  --accent-dim: rgba(59,130,246,0.12);
+  --accent-border: rgba(59,130,246,0.25);
+  --white: #ffffff;
+  --rule: rgba(255,255,255,0.06);
+  --f-display: 'Bricolage Grotesque', sans-serif;
+  --f-serif: 'Instrument Serif', serif;
+  --f-code: 'Fira Code', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--f-display);
+  background: var(--void);
+  color: var(--ink);
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* — cursor — */
+#cur-dot {
+  width: 5px; height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%,-50%);
+}
+#cur-ring {
+  width: 28px; height: 28px;
+  border: 1px solid rgba(59,130,246,0.45);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%,-50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+#cur-ring.big {
+  width: 44px; height: 44px;
+  border-color: rgba(59,130,246,0.7);
+}
+
+/* — scrollbar — */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--ink-3); }
+
+/* — selection — */
+::selection { background: rgba(59,130,246,0.3); color: var(--white); }
+
+/* — utilities — */
+.sr-label {
+  font-family: var(--f-code);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.tag-pill {
+  font-family: var(--f-code);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  #cur-dot, #cur-ring { display: none; }
+}
