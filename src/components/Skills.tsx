@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 const cols = [
   { label: 'Frontend', skills: [
@@ -18,9 +17,8 @@ const cols = [
 ]
 
 function Bar({ name, pct, delay }: { name: string; pct: number; delay: number }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.4 })
   return (
-    <div ref={ref} style={{ marginBottom: '1.5rem' }}>
+    <div style={{ marginBottom: '1.5rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
         <span style={{ fontFamily: 'var(--f-display)', fontWeight: 500, fontSize: '14px', color: 'var(--ink)' }}>{name}</span>
         <span style={{ fontFamily: 'var(--f-code)', fontSize: '11px', color: 'var(--ink-3)' }}>{pct}</span>
@@ -28,7 +26,8 @@ function Bar({ name, pct, delay }: { name: string; pct: number; delay: number })
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)', position: 'relative' }}>
         <motion.div
           initial={{ width: 0 }}
-          animate={inView ? { width: `${pct}%` } : {}}
+          whileInView={{ width: `${pct}%` }}
+          viewport={{ once: false, amount: 0.8 }}
           transition={{ duration: 1.2, delay, ease: [0.16,1,0.3,1] }}
           style={{ position: 'absolute', height: '1px', top: 0, left: 0, background: 'var(--accent)' }}
         />
@@ -38,15 +37,15 @@ function Bar({ name, pct, delay }: { name: string; pct: number; delay: number })
 }
 
 export default function Skills() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 })
-
   return (
-    <section id="skills" ref={ref} style={{ background: 'var(--void)', padding: '8rem 2.5rem', position: 'relative', zIndex: 1 }}>
+    <section id="skills" style={{ background: 'var(--void)', padding: '8rem 2.5rem', position: 'relative', zIndex: 1 }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '5rem' }}
         >
           <span className="sr-label">02 — keahlian & tools</span>
@@ -60,9 +59,10 @@ export default function Skills() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '0' }} className="skills-grid">
           {cols.map((col, ci) => (
             <motion.div key={col.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: ci * 0.1, duration: 0.5 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ delay: ci * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               style={{ padding: '0 3rem 0 0', borderRight: ci < 2 ? '1px solid var(--rule)' : 'none', paddingRight: ci === 2 ? 0 : '3rem', paddingLeft: ci > 0 ? '3rem' : 0 }}
             >
               <div className="sr-label" style={{ marginBottom: '2rem', paddingBottom: '1rem', borderBottom: '1px solid var(--rule)' }}>{col.label}</div>

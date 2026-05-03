@@ -70,8 +70,9 @@ export default function Hero() {
             {/* availability badge */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '3rem', padding: '5px 12px 5px 8px', border: '1px solid rgba(59,130,246,0.25)', borderRadius: '4px', background: 'rgba(59,130,246,0.07)' }}
             >
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 6px #22c55e', flexShrink: 0, animation: 'ping 2s ease infinite' }} />
@@ -81,9 +82,10 @@ export default function Hero() {
             {/* main heading — asymmetric, raw */}
             <div style={{ marginBottom: '2.5rem' }}>
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.45, ease: [0.16,1,0.3,1] }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.7, delay: 0.2, ease: [0.16,1,0.3,1] }}
                 style={{
                   fontFamily: 'var(--f-display)',
                   fontWeight: 800,
@@ -97,9 +99,10 @@ export default function Hero() {
                 Muhamad
               </motion.h1>
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.55, ease: [0.16,1,0.3,1] }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.7, delay: 0.3, ease: [0.16,1,0.3,1] }}
                 style={{
                   fontFamily: 'var(--f-serif)',
                   fontStyle: 'italic',
@@ -114,9 +117,10 @@ export default function Hero() {
                 Saifulloh
               </motion.h1>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.65, ease: [0.16,1,0.3,1] }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.1 }}
+                transition={{ duration: 0.7, delay: 0.4, ease: [0.16,1,0.3,1] }}
                 style={{ display: 'flex', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}
               >
                 <span style={{
@@ -134,8 +138,9 @@ export default function Hero() {
             {/* bottom row — desc + cta, max-width constrained */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.85 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '4rem', alignItems: 'end', maxWidth: '900px' }}
               className="grid-stack"
             >
@@ -173,15 +178,17 @@ export default function Hero() {
           <motion.div
             className="hero-photo-wrapper"
             initial={{ opacity: 0, scale: 0.85, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             style={{ position: 'relative', flexShrink: 0 }}
           >
             {/* outer glow ring */}
             <motion.div
               initial={{ opacity: 0, scale: 0.7 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 1.2, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 position: 'absolute', inset: '-16px',
                 borderRadius: '50%',
@@ -200,9 +207,10 @@ export default function Hero() {
 
             {/* photo container */}
             <motion.div
-              initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-              animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-              transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 position: 'relative', zIndex: 1,
                 width: '280px', height: '340px',
@@ -214,7 +222,7 @@ export default function Hero() {
             >
               {/* ── Ganti src di bawah dengan path foto Anda, contoh: "/profile.jpg" ── */}
               <img
-              src={pp.src}
+                src={pp.src}
                 alt="Muhamad Saifulloh Gana"
                 style={{
                   width: '100%',
@@ -222,20 +230,6 @@ export default function Hero() {
                   objectFit: 'cover',
                   objectPosition: 'center top',
                   display: 'block',
-                }}
-                onError={e => {
-                  // fallback placeholder jika foto belum ada
-                  const el = e.currentTarget as HTMLImageElement
-                  el.style.display = 'none'
-                  const parent = el.parentElement!
-                  parent.style.background = 'linear-gradient(160deg, rgba(37,99,235,0.15) 0%, rgba(15,23,42,0.8) 100%)'
-                  parent.innerHTML += `
-                    <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:2rem;">
-                      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="1.2">
-                        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-                      </svg>
-                      <span style="font-family:monospace;font-size:11px;color:rgba(148,163,184,0.6);letter-spacing:0.08em;text-align:center;line-height:1.6;">Tambahkan foto ke<br/>public/profile.jpg</span>
-                    </div>`
                 }}
               />
               {/* subtle overlay gradient at bottom */}
@@ -249,8 +243,9 @@ export default function Hero() {
             {/* decorative corner accent — top right */}
             <motion.div
               initial={{ opacity: 0, x: 10, y: -10 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
               style={{
                 position: 'absolute', top: '-8px', right: '-8px', zIndex: 2,
                 width: '24px', height: '24px',
@@ -261,8 +256,9 @@ export default function Hero() {
             {/* decorative corner accent — bottom left */}
             <motion.div
               initial={{ opacity: 0, x: -10, y: 10 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
               style={{
                 position: 'absolute', bottom: '-8px', left: '-8px', zIndex: 2,
                 width: '24px', height: '24px',
@@ -274,8 +270,9 @@ export default function Hero() {
             {/* floating badge — experience */}
             <motion.div
               initial={{ opacity: 0, x: 20, scale: 0.8 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 position: 'absolute', right: '-24px', top: '30%', zIndex: 3,
                 background: 'rgba(10,15,28,0.9)',
@@ -294,8 +291,9 @@ export default function Hero() {
             {/* floating badge — projects */}
             <motion.div
               initial={{ opacity: 0, x: -20, scale: 0.8 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.55, ease: [0.16, 1, 0.3, 1] }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 position: 'absolute', left: '-24px', bottom: '25%', zIndex: 3,
                 background: 'rgba(10,15,28,0.9)',
@@ -317,8 +315,9 @@ export default function Hero() {
         {/* scroll nudge — bottom left, minimal */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.8 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ delay: 1.2 }}
           style={{ position: 'absolute', bottom: '2.5rem', left: '2.5rem', display: 'flex', alignItems: 'center', gap: '12px' }}
         >
           <div style={{ width: '1px', height: '48px', background: 'linear-gradient(to bottom, transparent, rgba(59,130,246,0.5))', animation: 'grow 1.5s ease infinite alternate' }} />
@@ -326,7 +325,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes grow { from { transform: scaleY(0.4); } to { transform: scaleY(1); } }
         @keyframes ping { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -336,7 +335,7 @@ export default function Hero() {
           .hero-photo-wrapper > div[style*="280px"] { width: 200px !important; height: 240px !important; }
         }
         @media (max-width: 640px) { .grid-stack { grid-template-columns: 1fr !important; } }
-      `}</style>
+      `}} />
     </section>
   )
 }

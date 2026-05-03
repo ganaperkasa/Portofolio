@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 
 const info = [
@@ -30,7 +29,6 @@ const inputStyle = {
 }
 
 export default function Contact() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 })
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
 
@@ -64,12 +62,14 @@ export default function Contact() {
     )
 
   return (
-    <section id="contact" ref={ref} style={{ background: 'var(--deep)', padding: '8rem 2.5rem', position: 'relative', zIndex: 1 }}>
+    <section id="contact" style={{ background: 'var(--deep)', padding: '8rem 2.5rem', position: 'relative', zIndex: 1 }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '5rem' }}
         >
           <span className="sr-label">04 — kontak</span>
@@ -80,8 +80,9 @@ export default function Contact() {
 
           {/* left */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: 0.1, duration: 0.6, ease: [0.16,1,0.3,1] }}
           >
             <h2 style={{ fontFamily: 'var(--f-display)', fontWeight: 800, fontSize: 'clamp(2rem,4vw,3.5rem)', letterSpacing: '-0.04em', lineHeight: 0.95, color: 'var(--ink)', marginBottom: '1.5rem' }}>
@@ -96,9 +97,10 @@ export default function Contact() {
             <div style={{ marginBottom: '3rem' }}>
               {info.map((item, i) => (
                 <motion.div key={item.k}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.2 + i * 0.07 }}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{ delay: 0.2 + i * 0.1 }}
                   style={{ display: 'flex', gap: '2rem', alignItems: 'baseline', padding: '1rem 0', borderBottom: '1px solid var(--rule)' }}
                 >
                   <span className="sr-label" style={{ width: '72px', flexShrink: 0 }}>{item.k}</span>
@@ -111,9 +113,10 @@ export default function Contact() {
               {social.map((s, i) => (
                 <motion.a key={s.label}
                   href={s.href} target="_blank" rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.4 + i * 0.07 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: false, amount: 0.2 }}
+                  transition={{ delay: 0.4 + i * 0.1 }}
                   className="sr-label"
                   style={{ textDecoration: 'none', color: 'var(--ink-3)', border: '1px solid var(--rule)', padding: '8px 16px', transition: 'all 0.2s' }}
                   onMouseOver={e => { e.currentTarget.style.color = 'var(--ink)'; e.currentTarget.style.borderColor = 'rgba(59,130,246,0.35)' }}
@@ -126,8 +129,9 @@ export default function Contact() {
 
           {/* right — form */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
