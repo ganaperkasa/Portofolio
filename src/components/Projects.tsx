@@ -132,7 +132,7 @@ export default function Projects() {
           {projects.map((p, i) => <Row key={p.num} p={p} i={i} />)}
         </div>
       </div>
-      <style>{`@media(max-width:640px){.proj-header{flex-direction:column;gap:1.5rem;}}`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media(max-width:640px){.proj-header{flex-direction:column;gap:1.5rem;}}`}} />
     </section>
   )
 }

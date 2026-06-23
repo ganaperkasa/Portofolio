@@ -73,7 +73,7 @@ export default function Skills() {
           ))}
         </div>
       </div>
-      <style>{`@media(max-width:768px){.skills-grid{grid-template-columns:1fr!important;} .skills-grid>div{border-right:none!important;padding-left:0!important;border-bottom:1px solid var(--rule);padding-bottom:2rem;margin-bottom:2rem;}}`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media(max-width:768px){.skills-grid{grid-template-columns:1fr!important;} .skills-grid>div{border-right:none!important;padding-left:0!important;border-bottom:1px solid var(--rule);padding-bottom:2rem;margin-bottom:2rem;}}`}} />
     </section>
   )
 }

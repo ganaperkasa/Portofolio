@@ -91,7 +91,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <style>{`@media(max-width:768px){.about-grid{grid-template-columns:1fr!important;}}`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media(max-width:768px){.about-grid{grid-template-columns:1fr!important;}}`}} />
     </section>
   )
 }

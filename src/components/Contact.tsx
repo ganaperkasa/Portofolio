@@ -163,7 +163,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-      <style>{`@media(max-width:768px){.contact-grid{grid-template-columns:1fr!important;gap:4rem!important;}}`}</style>
+      <style dangerouslySetInnerHTML={{ __html: `@media(max-width:768px){.contact-grid{grid-template-columns:1fr!important;gap:4rem!important;}}`}} />
     </section>
   )
 }
