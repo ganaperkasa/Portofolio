@@ -3,7 +3,7 @@ import ProjectDetailClient from './ProjectDetailClient'
 // Hardcoded slugs for static export compatibility with Next.js 14
 export function generateStaticParams() {
   return [
-    { slug: 'e-commerce-platform' },
+    { slug: 'sidas-sweb' },
     { slug: 'task-management-app' },
     { slug: 'creative-portfolio' },
     { slug: 'analytics-dashboard' },

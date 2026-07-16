@@ -18,8 +18,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     num: '01',
-    title: 'E-Commerce Platform',
-    slug: 'e-commerce-platform',
+    title: 'Sistem Informasi Data Statistik Sampah',
+    slug: 'sidas-sweb',
     desc: 'Platform e-commerce full-featured dengan manajemen inventory real-time, payment gateway terintegrasi, dan dashboard analytics.',
     tags: ['React', 'Node.js', 'MongoDB', 'Redux'],
     year: '2024',
@@ -46,8 +46,8 @@ export const projects: Project[] = [
   },
   {
     num: '02',
-    title: 'Task Management App',
-    slug: 'task-management-app',
+    title: 'Sistem Pelayanan Persuratan Desa',
+    slug: 'sipedes',
     desc: 'Aplikasi manajemen tugas kolaboratif dengan real-time collaboration, drag-and-drop interface, dan notifikasi pintar.',
     tags: ['Vue.js', 'Firebase', 'Socket.io'],
     year: '2024',
@@ -75,8 +75,8 @@ export const projects: Project[] = [
   },
   {
     num: '03',
-    title: 'Creative Portfolio',
-    slug: 'creative-portfolio',
+    title: 'Sistem Informasi Booking Sport Center',
+    slug: 'sibospor',
     desc: 'Portfolio interaktif dengan animasi 3D, particle effects, dan transisi halaman yang memukau menggunakan teknologi terkini.',
     tags: ['Next.js', 'Three.js', 'GSAP'],
     year: '2023',
@@ -104,8 +104,66 @@ export const projects: Project[] = [
   },
   {
     num: '04',
-    title: 'Analytics Dashboard',
-    slug: 'analytics-dashboard',
+    title: 'Sistem Informasi Pemetaan Desa Ancaman Narkoba',
+    slug: 'sipedana',
+    desc: 'Dashboard analytics enterprise dengan visualisasi data real-time, laporan otomatis, dan integrasi multi-platform.',
+    tags: ['React', 'D3.js', 'Python', 'FastAPI'],
+    year: '2023',
+    longDesc: 'Dashboard analitik bisnis yang tangguh, dirancang untuk mengolah jutaan baris data mentah menjadi wawasan bisnis yang siap pakai secara real-time. Dengan integrasi pustaka D3.js, data divisualisasikan dalam bentuk grafik interaktif yang dapat difilter secara fleksibel. Backend berbasis Python FastAPI menjamin pemrosesan data berkecepatan tinggi dengan latensi yang sangat rendah.',
+    features: [
+      'Visualisasi Data Dinamis (Line, Bar, Pie, Scatter Plot) menggunakan D3.js.',
+      'Integrasi API FastAPI untuk pemrosesan data bertenaga tinggi.',
+      'Export Laporan Otomatis (Format PDF & Excel) dengan sekali klik.',
+      'Sistem Peran Pengguna (Role-based access control) untuk keamanan data.',
+      'Penyaringan Data Cepat (Date-range filtering & multi-dimension analysis).'
+    ],
+    techDetails: [
+      'Frontend: React.js dengan visualisasi kustom D3.js.',
+      'Backend: Python dengan FastAPI untuk API berkinerja tinggi.',
+      'Database: PostgreSQL untuk penyimpanan data terstruktur.',
+      'Data Processing: Pandas & NumPy untuk pemrosesan kalkulasi analitik.'
+    ],
+    demoUrl: 'https://demo-dashboard.example.com',
+    githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
+    images: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
+      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200'
+    ]
+  },
+  {
+    num: '05',
+    title: 'Sistem Peta Kerawanan Pelanggaran Sekolah',
+    slug: 'sipekpes',
+    desc: 'Dashboard analytics enterprise dengan visualisasi data real-time, laporan otomatis, dan integrasi multi-platform.',
+    tags: ['React', 'D3.js', 'Python', 'FastAPI'],
+    year: '2023',
+    longDesc: 'Dashboard analitik bisnis yang tangguh, dirancang untuk mengolah jutaan baris data mentah menjadi wawasan bisnis yang siap pakai secara real-time. Dengan integrasi pustaka D3.js, data divisualisasikan dalam bentuk grafik interaktif yang dapat difilter secara fleksibel. Backend berbasis Python FastAPI menjamin pemrosesan data berkecepatan tinggi dengan latensi yang sangat rendah.',
+    features: [
+      'Visualisasi Data Dinamis (Line, Bar, Pie, Scatter Plot) menggunakan D3.js.',
+      'Integrasi API FastAPI untuk pemrosesan data bertenaga tinggi.',
+      'Export Laporan Otomatis (Format PDF & Excel) dengan sekali klik.',
+      'Sistem Peran Pengguna (Role-based access control) untuk keamanan data.',
+      'Penyaringan Data Cepat (Date-range filtering & multi-dimension analysis).'
+    ],
+    techDetails: [
+      'Frontend: React.js dengan visualisasi kustom D3.js.',
+      'Backend: Python dengan FastAPI untuk API berkinerja tinggi.',
+      'Database: PostgreSQL untuk penyimpanan data terstruktur.',
+      'Data Processing: Pandas & NumPy untuk pemrosesan kalkulasi analitik.'
+    ],
+    demoUrl: 'https://demo-dashboard.example.com',
+    githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
+    images: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
+      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200'
+    ]
+  },
+  {
+    num: '06',
+    title: 'Media Pembelajaran OOPedia',
+    slug: 'sipekpes',
     desc: 'Dashboard analytics enterprise dengan visualisasi data real-time, laporan otomatis, dan integrasi multi-platform.',
     tags: ['React', 'D3.js', 'Python', 'FastAPI'],
     year: '2023',
