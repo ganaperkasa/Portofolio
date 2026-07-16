@@ -1,37 +1,14 @@
 'use client'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { projects, Project } from '../data/projects'
 
-const projects = [
-  {
-    num: '01', title: 'E-Commerce Platform',
-    desc: 'Platform e-commerce full-featured dengan manajemen inventory real-time, payment gateway terintegrasi, dan dashboard analytics.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Redux'],
-    year: '2024', href: '#',
-  },
-  {
-    num: '02', title: 'Task Management App',
-    desc: 'Aplikasi manajemen tugas kolaboratif dengan real-time collaboration, drag-and-drop interface, dan notifikasi pintar.',
-    tags: ['Vue.js', 'Firebase', 'Socket.io'],
-    year: '2024', href: '#',
-  },
-  {
-    num: '03', title: 'Creative Portfolio',
-    desc: 'Portfolio interaktif dengan animasi 3D, particle effects, dan transisi halaman yang memukau menggunakan teknologi terkini.',
-    tags: ['Next.js', 'Three.js', 'GSAP'],
-    year: '2023', href: '#',
-  },
-  {
-    num: '04', title: 'Analytics Dashboard',
-    desc: 'Dashboard analytics enterprise dengan visualisasi data real-time, laporan otomatis, dan integrasi multi-platform.',
-    tags: ['React', 'D3.js', 'Python', 'FastAPI'],
-    year: '2023', href: '#',
-  },
-]
+const MotionLink = motion(Link)
 
-function Row({ p, i }: { p: typeof projects[0]; i: number }) {
+function Row({ p, i }: { p: Project; i: number }) {
   return (
-    <motion.a
-      href={p.href}
+    <MotionLink
+      href={`/projects/${p.slug}`}
       initial={{ opacity: 0, y: 30, scale: 0.98 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: false, amount: 0.2 }}
@@ -98,7 +75,7 @@ function Row({ p, i }: { p: typeof projects[0]; i: number }) {
           style={{ fontSize: '1.2rem', display: 'block' }}
         >↗</motion.span>
       </div>
-    </motion.a>
+    </MotionLink>
   )
 }
 
@@ -120,7 +97,7 @@ export default function Projects() {
             <em style={{ fontFamily: 'var(--f-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--ink-2)' }}>Terpilih</em>
           </h2>
           <div style={{ textAlign: 'right' }}>
-            <span className="sr-label" style={{ display: 'block', marginBottom: '0.5rem' }}>03 — proyek</span>
+            <span className="sr-label" style={{ display: 'block', marginBottom: '0.5rem' }}>{projects.length.toString().padStart(2, '0')} — proyek</span>
             <p style={{ fontFamily: 'var(--f-display)', fontWeight: 300, fontSize: '0.85rem', color: 'var(--ink-3)', maxWidth: '240px', lineHeight: 1.6 }}>
               Di mana fungsi bertemu estetika
             </p>

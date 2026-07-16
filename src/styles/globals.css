@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Fira+Code:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --void: #06090f;
@@ -17,9 +17,9 @@
   --accent-border: rgba(59,130,246,0.25);
   --white: #ffffff;
   --rule: rgba(255,255,255,0.06);
-  --f-display: 'Bricolage Grotesque', sans-serif;
-  --f-serif: 'Instrument Serif', serif;
-  --f-code: 'Fira Code', monospace;
+  --f-display: 'Raleway', sans-serif;
+  --f-serif: 'Raleway', sans-serif;
+  --f-code: 'Raleway', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,6 +29,7 @@ body {
   font-family: var(--f-display);
   background: var(--void);
   color: var(--ink);
+   font-style: italic;
   overflow-x: hidden;
   cursor: none;
   -webkit-font-smoothing: antialiased;
