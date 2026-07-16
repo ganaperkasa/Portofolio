@@ -1,3 +1,5 @@
+import { getPublicImages } from './publicImages';
+
 export interface Project {
   num: string;
   title: string;
@@ -39,9 +41,7 @@ export const projects: Project[] = [
     demoUrl: 'https://demo-ecommerce.example.com',
     githubUrl: 'https://github.com/saifullohgana/ecommerce-platform',
     images: [
-      'https://images.unsplash.com/photo-1563013544-824ae1d704d3?q=80&w=1200',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200'
+      ...getPublicImages(['LP-Peta.png','DB-Peta.png', 'Login-Peta.png' ])
     ]
   },
   {

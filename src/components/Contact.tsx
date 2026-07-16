@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const info = [
   { k: 'Email', v: 'ganaperkasa77@gmail.com' },
-  { k: 'Telepon', v: '+62 858-0836-3785' },
+  { k: 'Telepon', v: '+62 8810 2643 8752' },
   { k: 'Lokasi', v: 'Kediri, Indonesia' },
 ]
 const social = [
