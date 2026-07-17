@@ -205,9 +205,7 @@ techDetails: [
     demoUrl: 'https://demo-dashboard.example.com',
     githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
     images: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200'
+      ...getPublicImages([ 'Login-Servis.png', 'DB-Servis.png' ,'Payment-Servis.png', 'Invoice-Servis.png' ])
     ]
   }
 ];
