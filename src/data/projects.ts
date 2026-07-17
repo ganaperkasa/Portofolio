@@ -48,23 +48,28 @@ export const projects: Project[] = [
     num: '02',
     title: 'Sistem Pelayanan Persuratan Desa',
     slug: 'sipedes',
-    desc: 'Aplikasi manajemen tugas kolaboratif dengan real-time collaboration, drag-and-drop interface, dan notifikasi pintar.',
-    tags: ['Vue.js', 'Firebase', 'Socket.io'],
-    year: '2024',
-    longDesc: 'Sebuah aplikasi manajemen proyek dan tugas yang dirancang khusus untuk meningkatkan produktivitas tim jarak jauh. Dengan antarmuka Kanban yang interaktif menggunakan metode drag-and-drop, tim dapat dengan mudah melacak alur kerja dari persiapan hingga selesai. Fitur real-time kolaborasi memungkinkan pengguna melihat pembaruan tugas dari rekan kerja secara langsung tanpa perlu menyegarkan halaman. Sistem notifikasi pintar terintegrasi akan mengingatkan tenggat waktu penting.',
-    features: [
-      'Papan Kerja Kanban interaktif dengan fungsi Drag-and-Drop.',
-      'Kolaborasi Real-Time langsung (sinkronisasi antar anggota tim).',
-      'Sistem Komentar, lampiran file, dan riwayat aktivitas tugas.',
-      'Notifikasi Push & Email pengingat tenggat waktu (due date reminders).',
-      'Filter tugas canggih berdasarkan kategori, prioritas, dan penanggung jawab.'
-    ],
-    techDetails: [
-      'Frontend: Vue.js dengan Tailwind CSS untuk kecepatan render dan estetika tinggi.',
-      'Backend & Realtime: Node.js dengan Socket.io untuk transmisi data instan.',
-      'Database & Storage: Firebase Firestore untuk database real-time dan Firebase Storage untuk dokumen.',
-      'Build Tool: Vite untuk optimasi performa kompilasi frontend.'
-    ],
+    desc: 'Sistem pengajuan surat desa berbasis web dengan notifikasi WhatsApp, verifikasi admin, dan pembuatan dokumen otomatis.',
+tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'WhatsApp API'],
+year: '2024',
+longDesc: 'Aplikasi Pengajuan Surat Desa ini merupakan sistem digital yang dirancang untuk meningkatkan efisiensi pelayanan administrasi desa. Warga dapat mengajukan berbagai jenis surat secara online tanpa harus datang ke kantor desa. Sistem ini dilengkapi dengan manajemen data warga, proses verifikasi oleh admin, serta pembuatan dokumen surat secara otomatis. Salah satu fitur unggulannya adalah integrasi notifikasi WhatsApp yang memberikan update status pengajuan secara real-time kepada pengguna, sehingga transparansi dan komunikasi menjadi lebih efektif. Dashboard admin juga menyediakan monitoring data pengajuan dan laporan secara terpusat.',
+features: [
+  'Pengajuan surat online dengan form dinamis.',
+  'Manajemen data biodata warga terintegrasi.',
+  'Sistem verifikasi & approval oleh admin.',
+  'Generate dokumen surat otomatis berbasis template.',
+  'Notifikasi WhatsApp otomatis (status pengajuan, approval, dll).',
+  'Manajemen upload dokumen/lampiran.',
+  'Dashboard admin untuk monitoring dan laporan.',
+  'Autentikasi user dengan role (admin & warga).'
+],
+techDetails: [
+  'Framework: Laravel (PHP) dengan arsitektur MVC.',
+  'Database: MySQL menggunakan Eloquent ORM.',
+  'Frontend: Blade Template + Bootstrap.',
+  'Integrasi API: WhatsApp Gateway API untuk notifikasi otomatis.',
+  'Authentication: Laravel Auth (login, register, middleware role).',
+  'File Handling: Upload & generate dokumen (PDF/Doc).'
+],
     demoUrl: 'https://demo-tasks.example.com',
     githubUrl: 'https://github.com/saifullohgana/task-management-app',
     images: [
@@ -106,23 +111,31 @@ export const projects: Project[] = [
     num: '04',
     title: 'Sistem Informasi Pemetaan Desa Ancaman Narkoba',
     slug: 'sipedana',
-    desc: 'Dashboard analytics enterprise dengan visualisasi data real-time, laporan otomatis, dan integrasi multi-platform.',
-    tags: ['React', 'D3.js', 'Python', 'FastAPI'],
-    year: '2023',
-    longDesc: 'Dashboard analitik bisnis yang tangguh, dirancang untuk mengolah jutaan baris data mentah menjadi wawasan bisnis yang siap pakai secara real-time. Dengan integrasi pustaka D3.js, data divisualisasikan dalam bentuk grafik interaktif yang dapat difilter secara fleksibel. Backend berbasis Python FastAPI menjamin pemrosesan data berkecepatan tinggi dengan latensi yang sangat rendah.',
-    features: [
-      'Visualisasi Data Dinamis (Line, Bar, Pie, Scatter Plot) menggunakan D3.js.',
-      'Integrasi API FastAPI untuk pemrosesan data bertenaga tinggi.',
-      'Export Laporan Otomatis (Format PDF & Excel) dengan sekali klik.',
-      'Sistem Peran Pengguna (Role-based access control) untuk keamanan data.',
-      'Penyaringan Data Cepat (Date-range filtering & multi-dimension analysis).'
-    ],
-    techDetails: [
-      'Frontend: React.js dengan visualisasi kustom D3.js.',
-      'Backend: Python dengan FastAPI untuk API berkinerja tinggi.',
-      'Database: PostgreSQL untuk penyimpanan data terstruktur.',
-      'Data Processing: Pandas & NumPy untuk pemrosesan kalkulasi analitik.'
-    ],
+    desc: 'Sistem monitoring dan manajemen pasien penyalahgunaan narkoba berbasis web dengan visualisasi peta sebaran menggunakan Leaflet.js dan notifikasi WhatsApp real-time.',
+tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'Leaflet.js', 'WhatsApp API', 'Chart.js'],
+year: '2024',
+longDesc: 'Aplikasi ini merupakan sistem informasi yang dirancang untuk mendukung monitoring dan pengelolaan data pasien penyalahgunaan narkoba secara terpusat. Sistem memungkinkan admin untuk mengelola data pasien, mengatur antrian layanan, serta memantau statistik kasus melalui dashboard interaktif. Salah satu fitur utama adalah visualisasi geografis menggunakan Leaflet.js yang menampilkan persebaran pasien berdasarkan wilayah, sehingga memudahkan analisis data secara spasial. Selain itu, sistem dilengkapi dengan integrasi notifikasi WhatsApp untuk memberikan informasi layanan secara real-time. Aplikasi ini juga menyediakan REST API untuk integrasi data, fitur pengaduan masyarakat, serta sistem sosialisasi informasi untuk meningkatkan awareness publik.',
+features: [
+  'Manajemen data pasien penyalahgunaan narkoba (CRUD).',
+  'Sistem antrian layanan pasien.',
+  'Visualisasi peta sebaran pasien berbasis Leaflet.js (geospasial).',
+  'Dashboard analytics dengan grafik statistik kasus (Chart.js).',
+  'Integrasi notifikasi WhatsApp real-time.',
+  'REST API untuk data pasien, klinik, dan dokter.',
+  'Sistem pengaduan masyarakat.',
+  'Fitur sosialisasi / edukasi publik.',
+  'Role-based access (admin, petugas, kepala).'
+],
+techDetails: [
+  'Backend: Laravel (PHP) dengan arsitektur MVC.',
+  'Database: MySQL menggunakan Eloquent ORM.',
+  'Frontend: Blade Template, Bootstrap, dan JavaScript.',
+  'Maps & Geospatial: Leaflet.js untuk visualisasi peta interaktif.',
+  'Data Visualization: Chart.js untuk grafik statistik.',
+  'Integrasi API: WhatsApp Gateway API (HTTP request).',
+  'Authentication: Laravel Auth + middleware role-based.',
+  'API: RESTful API untuk integrasi layanan eksternal.'
+],
     demoUrl: 'https://demo-dashboard.example.com',
     githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
     images: [
@@ -181,6 +194,42 @@ export const projects: Project[] = [
       'Database: PostgreSQL untuk penyimpanan data terstruktur.',
       'Data Processing: Pandas & NumPy untuk pemrosesan kalkulasi analitik.'
     ],
+    demoUrl: 'https://demo-dashboard.example.com',
+    githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
+    images: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
+      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200'
+    ]
+  },
+  {
+    num: '07',
+    title: 'Sistem Kasir & Manajemen Servis Motor',
+    slug: 'sikasmot',
+    desc: 'Sistem kasir dan manajemen layanan servis motor berbasis web dengan fitur booking online dan antarmuka interaktif menggunakan Vue.js.',
+tags: ['Laravel', 'Vue.js', 'PHP', 'MySQL', 'Bootstrap', 'AJAX'],
+year: '2024',
+longDesc: 'Aplikasi ini merupakan sistem kasir dan manajemen layanan servis motor yang dirancang untuk membantu operasional bengkel secara digital. Sistem ini memungkinkan admin untuk mengelola data pelanggan, mekanik, produk, serta paket servis, sekaligus mencatat transaksi layanan secara terstruktur. Pengguna umum dapat melakukan booking jadwal servis secara online tanpa harus datang langsung ke lokasi. Dengan integrasi Vue.js pada sisi frontend, aplikasi memiliki interaksi yang lebih dinamis seperti pengelolaan data tanpa reload halaman dan pengalaman pengguna yang lebih responsif. Sistem ini juga dilengkapi dengan manajemen antrian servis dan dashboard monitoring untuk meningkatkan efisiensi operasional bengkel.',
+features: [
+  'Sistem kasir untuk transaksi servis dan penjualan produk.',
+  'Booking / reservasi servis oleh pelanggan secara online.',
+  'Manajemen data pelanggan, mekanik, produk, dan layanan.',
+  'Sistem antrian servis berbasis reservasi.',
+  'Interaksi dinamis menggunakan Vue.js (tanpa reload halaman).',
+  'Pencatatan histori transaksi dan layanan.',
+  'Dashboard admin untuk monitoring operasional.',
+  'REST API untuk pengelolaan data.',
+  'Autentikasi dan role-based access.'
+],
+techDetails: [
+  'Backend: Laravel (PHP) dengan arsitektur MVC.',
+  'Database: MySQL dengan Eloquent ORM.',
+  'Frontend: Vue.js terintegrasi dengan Laravel.',
+  'UI: Bootstrap untuk styling antarmuka.',
+  'Interactivity: AJAX & Vue reactive components.',
+  'API: RESTful API untuk data reservasi, produk, pelanggan, dan mekanik.',
+  'Authentication: Laravel Auth + middleware.'
+],
     demoUrl: 'https://demo-dashboard.example.com',
     githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
     images: [
