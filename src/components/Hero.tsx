@@ -213,7 +213,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 position: 'relative', zIndex: 1,
-                width: '280px', height: '340px',
+                width: '360px', height: '500px',
                 borderRadius: '140px 140px 120px 120px',
                 overflow: 'hidden',
                 border: '1px solid rgba(59,130,246,0.2)',
