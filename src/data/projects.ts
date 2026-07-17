@@ -20,28 +20,33 @@ export const projects: Project[] = [
     num: '01',
     title: 'Sistem Informasi Data Statistik Sampah',
     slug: 'sidas-sweb',
-    desc: 'Platform e-commerce full-featured dengan manajemen inventory real-time, payment gateway terintegrasi, dan dashboard analytics.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Redux'],
+    desc: 'Sistem informasi statistik sampah berbasis web dengan visualisasi data dan pemetaan lokasi TPS menggunakan Leaflet.js.',
+    tags: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'Leaflet.js', 'Chart.js'],
     year: '2024',
-    longDesc: 'E-Commerce Platform ini adalah solusi penjualan online skala enterprise yang dirancang untuk performa tinggi, keamanan maksimal, dan skalabilitas. Sistem ini dilengkapi dengan sinkronisasi inventaris secara langsung (real-time inventory tracking), manajemen promosi dan diskon dinamis, serta integrasi multi-gateway pembayaran otomatis (seperti Midtrans/Stripe). Halaman admin dilengkapi visualisasi grafik penjualan lengkap untuk memantau performa bisnis harian secara intuitif.',
+    longDesc: 'Aplikasi ini merupakan sistem informasi yang dirancang untuk menampilkan dan mengelola data statistik sampah di Kota Kediri secara terpusat. Sistem memungkinkan admin untuk menginput dan mengelola data terkait volume sampah, kategori sampah, serta lokasi Tempat Pembuangan Sampah (TPS). Salah satu fitur utama dari aplikasi ini adalah visualisasi peta interaktif menggunakan Leaflet.js yang menampilkan persebaran TPS berdasarkan koordinat geografis. Selain itu, sistem juga menyediakan dashboard statistik dalam bentuk grafik yang memudahkan pengguna dalam memahami tren dan distribusi data sampah. Aplikasi ini bertujuan untuk mendukung pengambilan keputusan berbasis data dalam pengelolaan lingkungan dan kebijakan publik.',
     features: [
-      'Manajemen Inventaris & Stok Real-Time otomatis.',
-      'Sistem Keranjang Belanja & Checkout multi-step yang aman.',
-      'Integrasi Payment Gateway otomatis dengan notifikasi webhook.',
-      'Dashboard Analytics Admin dengan metrik penjualan, produk terlaris, dan data demografis pembeli.',
-      'Sistem Keamanan JWT, hashing password dengan bcrypt, dan pencegahan eksploitasi web standar.'
+      'Manajemen data sampah (volume, kategori, periode).',
+      'Manajemen data lokasi TPS (Tempat Pembuangan Sampah).',
+      'Visualisasi peta interaktif menggunakan Leaflet.js.',
+      'Marker lokasi TPS dengan informasi detail (popup).',
+      'Dashboard statistik dengan grafik data sampah.',
+      'Filter data berdasarkan periode atau kategori.',
+      'Manajemen user/admin.',
+      'Sistem monitoring data lingkungan berbasis web.'
     ],
     techDetails: [
-      'Frontend: React.js, Tailwind CSS untuk antarmuka yang modern dan responsif.',
-      'State Management: Redux Toolkit untuk mengelola state global aplikasi secara efisien.',
-      'Backend: Node.js dengan Express.js untuk RESTful API yang cepat dan handal.',
-      'Database: MongoDB dengan Mongoose untuk penyimpanan data dokumen fleksibel.',
-      'Autentikasi: JSON Web Token (JWT) untuk sesi login pengguna yang aman.'
+      'Backend: Laravel (PHP).',
+      'Database: MySQL untuk penyimpanan data sampah dan lokasi TPS.',
+      'Frontend: HTML, Bootstrap, dan JavaScript.',
+      'Maps & Geospatial: Leaflet.js untuk visualisasi peta interaktif.',
+      'Data Visualization: Chart.js untuk grafik statistik.',
+      'Architecture: Multi-page application (MPA).',
+      'Interactivity: JavaScript untuk manipulasi data dan tampilan.'
     ],
     demoUrl: 'https://demo-ecommerce.example.com',
     githubUrl: 'https://github.com/saifullohgana/ecommerce-platform',
     images: [
-      ...getPublicImages(['LP-Peta.png','DB-Peta.png', 'Login-Peta.png' ])
+      ...getPublicImages(['Login-TPS.png', 'DB-TPS.png' ])
     ]
   },
   {
