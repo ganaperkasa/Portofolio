@@ -121,7 +121,7 @@ export default function ProjectDetailClient({ slug }: { slug: string }) {
               {/* Main Active Image Display */}
               <div style={{ 
                 width: '100%', 
-                height: '420px', 
+                aspectRatio: '19 / 9',
                 borderRadius: '12px', 
                 overflow: 'hidden', 
                 border: '1px solid rgba(255,255,255,0.06)',
