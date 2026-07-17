@@ -78,9 +78,7 @@ techDetails: [
     demoUrl: 'https://demo-tasks.example.com',
     githubUrl: 'https://github.com/saifullohgana/task-management-app',
     images: [
-      'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200',
-      'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200',
-      'https://images.unsplash.com/photo-1484417894907-623942c8ea29?q=80&w=1200'
+      ...getPublicImages(['LD-Desa.png','Login-Desa.png', 'DB-Desa.png' ])
     ]
   },
   {
@@ -144,9 +142,7 @@ techDetails: [
     demoUrl: 'https://demo-dashboard.example.com',
     githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
     images: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200'
+       ...getPublicImages(['LD-Narkoba.png', 'Login-Narkoba.png', 'DB-Narkoba.png' ])
     ]
   },
   {
@@ -180,35 +176,6 @@ techDetails: [
   },
   {
     num: '06',
-    title: 'Media Pembelajaran OOPedia',
-    slug: 'sipekpes',
-    desc: 'Dashboard analytics enterprise dengan visualisasi data real-time, laporan otomatis, dan integrasi multi-platform.',
-    tags: ['React', 'D3.js', 'Python', 'FastAPI'],
-    year: '2023',
-    longDesc: 'Dashboard analitik bisnis yang tangguh, dirancang untuk mengolah jutaan baris data mentah menjadi wawasan bisnis yang siap pakai secara real-time. Dengan integrasi pustaka D3.js, data divisualisasikan dalam bentuk grafik interaktif yang dapat difilter secara fleksibel. Backend berbasis Python FastAPI menjamin pemrosesan data berkecepatan tinggi dengan latensi yang sangat rendah.',
-    features: [
-      'Visualisasi Data Dinamis (Line, Bar, Pie, Scatter Plot) menggunakan D3.js.',
-      'Integrasi API FastAPI untuk pemrosesan data bertenaga tinggi.',
-      'Export Laporan Otomatis (Format PDF & Excel) dengan sekali klik.',
-      'Sistem Peran Pengguna (Role-based access control) untuk keamanan data.',
-      'Penyaringan Data Cepat (Date-range filtering & multi-dimension analysis).'
-    ],
-    techDetails: [
-      'Frontend: React.js dengan visualisasi kustom D3.js.',
-      'Backend: Python dengan FastAPI untuk API berkinerja tinggi.',
-      'Database: PostgreSQL untuk penyimpanan data terstruktur.',
-      'Data Processing: Pandas & NumPy untuk pemrosesan kalkulasi analitik.'
-    ],
-    demoUrl: 'https://demo-dashboard.example.com',
-    githubUrl: 'https://github.com/saifullohgana/analytics-dashboard',
-    images: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
-      'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200'
-    ]
-  },
-  {
-    num: '07',
     title: 'Sistem Kasir & Manajemen Servis Motor',
     slug: 'sikasmot',
     desc: 'Sistem kasir dan manajemen layanan servis motor berbasis web dengan fitur booking online dan antarmuka interaktif menggunakan Vue.js.',

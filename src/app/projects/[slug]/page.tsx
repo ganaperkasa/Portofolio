@@ -4,9 +4,11 @@ import ProjectDetailClient from './ProjectDetailClient'
 export function generateStaticParams() {
   return [
     { slug: 'sidas-sweb' },
-    { slug: 'task-management-app' },
-    { slug: 'creative-portfolio' },
-    { slug: 'analytics-dashboard' },
+    { slug: 'sipedes' },
+    { slug: 'sibospor' },
+    { slug: 'sipedana' },
+    { slug: 'sipekpes' },
+    { slug: 'sikasmot' }
   ]
 }
 
